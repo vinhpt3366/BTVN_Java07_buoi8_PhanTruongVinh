@@ -73,15 +73,23 @@ public class SinhVien {
 			this.xl = "Xuất sắc";
 		} else if (d >= 8) {
 			this.xl = "Giỏi";
-		} else if (d >= 7) {
+		} else if (d >= 6.5) {
 			this.xl = "Khá";
-		} else if (d >= 6) {
-			this.xl = "Trung bình";
 		} else if (d >= 5) {
-			this.xl = "Yếu";
+			this.xl = "Trung bình";
 		} else {
-			this.xl = "Kém";
+			this.xl = "Yếu";
 		}
+	}
+
+	public void printInfo() {
+		System.out.printf("Sinh viên: %-6s,MSSV: %-7s, Toán: %4.1f, Lý: %4.1f, Hoá: %4.1f%n", this.ten, this.maSV,
+				this.diemToan, this.diemLy, this.diemHoa);
+	}
+
+	public void printInfoDetail() {
+		System.out.printf("Sinh viên: %-6s,MSSV: %-7s, Toán: %4.1f, Lý: %4.1f, Hoá: %4.1f, ĐTB: %4.1f, Xếp loại: %s%n",
+				this.ten, this.maSV, this.diemToan, this.diemLy, this.diemHoa, this.diemTB, this.xl);
 	}
 
 }
